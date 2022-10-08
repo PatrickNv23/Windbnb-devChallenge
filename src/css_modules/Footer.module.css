@@ -1,0 +1,17 @@
+.footer {
+  width: 100%;
+  min-height: 66px;
+  max-height: auto;
+  /* background-color: lightcoral; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerText {
+  color: #828282;
+}
+
+.footerUsername {
+  font-weight: bold;
+}

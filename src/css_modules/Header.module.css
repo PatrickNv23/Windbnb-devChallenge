@@ -1,0 +1,12 @@
+.header {
+  width: 100%;
+  /* background-color: blueviolet; */
+  height: 140px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.imageLogo {
+  padding-left: 16px;
+}

@@ -1,0 +1,39 @@
+.container_main {
+  width: 100%;
+  min-height: 100%;
+  max-height: auto;
+  /* background-color: lightblue; */
+}
+
+.section_title {
+  width: 100%;
+  height: auto;
+  /* background-color: lightgreen; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.titleStays {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #333333;
+  padding: 16px;
+}
+
+.totalStays {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #4F4F4F;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 32px;
+}
+
+.container_grid {
+  display: flex;
+  flex-wrap: wrap;
+}
