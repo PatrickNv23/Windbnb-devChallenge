@@ -1,3 +1,4 @@
+/* CONVERSIÓN A GRID */
 .container_main {
   width: 100%;
   min-height: 100%;
@@ -19,7 +20,8 @@
   font-size: 24px;
   line-height: 29px;
   color: #333333;
-  padding: 16px;
+  padding: 16px 16px 16px 25px;
+  /* top right botton left */
 }
 
 .totalStays {
@@ -27,13 +29,20 @@
   font-size: 14px;
   line-height: 17px;
   color: #4F4F4F;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  padding-left: 16px;
-  padding-right: 32px;
+  padding: 16px 25px 16px 16px;
 }
 
 .container_grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 395px);
+  gap: 32px;
+  padding: 16px;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 450px) {
+  .container_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
