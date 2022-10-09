@@ -12,25 +12,44 @@
   border-radius: 24px;
 }
 
+.containerDetailsStay {
+  /* background-color: red; */
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .detailsStay {
   display: flex;
   justify-content: space-between;
+  height: 100%;
 }
 
 .detailSuperHostAndBeds {
   display: flex;
-  width: 73%;
+  width: 75%;
+  height: 100%;
   justify-content: space-between;
   /* background-color: aqua; */
 }
 
 .detailSuperHostAndBeds,
-.ratingStay {
+.containerRatingStay {
   padding-top: 20px;
   padding-bottom: 17px;
 }
 
+
 .superHost {
+  box-sizing: border-box;
+  width: 100px;
+  height: 28px;
+  border: 1px solid #4F4F4F;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-weight: 700;
   font-size: 12px;
   color: #4F4F4F;
@@ -41,7 +60,37 @@
   font-weight: 500;
   font-size: 14px;
   color: #828282;
+
 }
+
+
+
+.containerRatingStay {
+  width: 15%;
+  /* background-color: aqua; */
+  height: 100%;
+  position: relative;
+  /* display: flex;
+  justify-content: space-between; */
+}
+
+.containerStarIcon {
+  /* background-color: aliceblue; */
+  position: absolute;
+  left: 0;
+  top: 17px;
+}
+
+.rating {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #4F4F4F;
+  position: absolute;
+  right: 0;
+}
+
 
 .titleStay {
   font-weight: 600;

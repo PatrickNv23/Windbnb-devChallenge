@@ -4,9 +4,9 @@ export default function StayCard({ photo, superHost, type, beds, rating, title }
 
   function isSuperHost() {
     if (superHost) {
-      return <p className={styles.superHost}>
+      return <div className={styles.superHost}>
         SUPER HOST
-      </p>
+      </div>
     }
   }
 
@@ -27,10 +27,21 @@ export default function StayCard({ photo, superHost, type, beds, rating, title }
             }
             <span className={styles.typeStaysAndTotalBeds}>{type} {isSuperHostAndBeds()}</span>
           </div>
-          <div className={styles.ratingStay}>{rating}</div>
+          <div className={styles.containerRatingStay}>
+            <div className={styles.containerStarIcon}>
+              <span style={{ color: "#EB5757" }} className="material-icons-round">
+                star
+              </span>
+            </div>
+
+            <p className={styles.rating}>
+              {rating}
+            </p>
+
+          </div>
         </div>
         <p className={styles.titleStay}>{title}</p>
       </figcaption>
-    </figure>
+    </figure >
   )
 }

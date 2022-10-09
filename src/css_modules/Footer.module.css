@@ -10,8 +10,10 @@
 
 .footerText {
   color: #828282;
+  font-size: 14px;
 }
 
 .footerUsername {
   font-weight: bold;
+  text-decoration: underline;
 }
