@@ -1,0 +1,45 @@
+.formSearch {
+  display: flex;
+  width: 297px;
+  height: 55px;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  overflow: auto;
+  margin-right: 30px;
+}
+
+.containerCountrySearch,
+.containerGuestSearch,
+.containerIconSearch {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.containerCountrySearch {
+  /* background-color: aqua; */
+  width: 138px;
+  color: #333333;
+  border-right: 1px solid #F2F2F2;
+  ;
+}
+
+.containerGuestSearch {
+  /* background-color: lightblue; */
+  width: 106px;
+  color: #BDBDBD;
+  border-right: 1px solid #F2F2F2;
+
+}
+
+.containerIconSearch {
+  /* background-color: lightcoral; */
+  width: 53px;
+}
