@@ -7,6 +7,7 @@
   border-radius: 16px;
   overflow: auto;
   margin-right: 23px;
+  cursor: pointer;
 }
 
 .containerCountrySearch,
@@ -21,6 +22,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
+  cursor: pointer;
 }
 
 .containerCountrySearch {

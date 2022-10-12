@@ -1,65 +1,106 @@
-.containerModal {
-  background-color: rgba(79, 79, 79, 0.4);
+.containerFormModal {
   z-index: 1;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.containerFormModal {
   background-color: #FFFFFF;
   z-index: 2;
   width: 100%;
   height: 460px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 1248px);
+  grid-template-columns: 427px 426px 395px;
   justify-content: center;
 }
 
+.containerModalBottom {
+  background-color: rgba(79, 79, 79, 0.4);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 
 .formSearchModal {
   height: auto;
   /* background-color: aqua; */
   display: flex;
-  width: auto;
-  height: 377px;
+  min-width: auto;
+  width: 1248px;
+  max-width: 1248px;
+  height: 55px;
   margin-top: 93px;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+}
+
+.containerInputLocationModal,
+.containerInputGuestsModal,
+.containerSearchButtonModal {
+  min-width: auto;
+  border-right: 1px solid #F2F2F2;
+  height: auto;
+
+}
+
+.containerInputLocationModal {
+  width: 427px;
+  max-width: 427px;
+}
+
+.containerInputGuestsModal {
+  width: 426px;
+  max-width: 426px;
+}
+
+.containerInputLocationModal:focus-within,
+.containerInputGuestsModal:focus-within {
+  border: 1px solid #333333;
+  /* filter: drop-shadow(0px 1px 6px rgba(0, 0, 0, 0.1)); */
+  border-radius: 16px;
+
+}
+
+.containerSearchButtonModal {
+  width: 395px;
+  max-width: 395px;
+}
+
+.containerLocationsModal,
+.containerGuestsModal,
+.containerSearchButtonModal {
+  min-width: auto;
+  width: 100%;
+  height: 100%;
 }
 
 .containerLocationsModal {
   /* background-color: lightblue; */
-  min-width: auto;
-  width: 427px;
   max-width: 427px;
-  height: auto;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  margin-bottom: 165px;
 }
 
 .containerGuestsModal {
   /* background-color: lightgreen; */
-  min-width: auto;
-  width: 426px;
   max-width: 426px;
-  height: auto;
+  grid-column-start: 2;
+  grid-column-end: 3;
 }
 
-.containerSearchButtonModal {
-  /* background-color: lightcoral; */
-  min-width: auto;
-  width: 395px;
-  max-width: 395px;
-  height: auto;
-}
 
 /* SECTION LOCATIONS*/
 .containerInputLocationModal,
 .containerInputGuestsModal {
-  min-width: auto;
-  width: 100%;
-  height: 55px;
+  /* height: auto; */
   /* background-color: bisque; */
   display: flex;
   flex-direction: column;
@@ -95,6 +136,7 @@
   font-size: 14px;
   line-height: 18px;
   color: #BDBDBD;
+  cursor: pointer;
 }
 
 .containerOptionsLocationModal {
@@ -146,6 +188,8 @@
   /* background-color: lightcoral; */
   width: 80%;
   margin-left: 32px;
+  margin-bottom: 4px;
+  height: auto;
 }
 
 .textTypeGuestModal,
@@ -172,6 +216,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 12px;
 }
 
 .buttonSelectionCounterGuestsModal {

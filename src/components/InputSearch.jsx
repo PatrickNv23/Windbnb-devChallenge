@@ -1,31 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from '../css_modules/InputSearch.module.css';
 import Modal from './Modal.jsx';
 export default function InputSearch() {
+  const [modalHandler, setModalHandler] = useState(false);
 
-  // const openModal = (e) => {
-  //   e.preventDefault();
-  //   console.log("XDDD")
-  //   return <Modal />
-  // }
-  // onSubmit={(e) => openModal(e)}
+  const handleClickSearchForm = () => {
+    setModalHandler(!modalHandler);
+  }
+
+  const handlingModal = () => {
+    if (modalHandler) {
+      return <Modal isOpen={modalHandler} resetStateInputSearch={handlingResetStateInputSearch} />
+    }
+  }
+
+  const handlingResetStateInputSearch = (newState) => {
+    setModalHandler(newState);
+  }
+
 
   return (
     <>
-      <form className={styles.formSearch} >
+      <form className={styles.formSearch} onClick={() => handleClickSearchForm()} >
         <div className={styles.containerCountrySearch}>
           Helsinki, Finland
         </div>
         <div className={styles.containerGuestSearch}>
           Add guest
         </div>
-        <button className={styles.containerIconSearch}>
+        <div className={styles.containerIconSearch}>
           <span style={{ color: "#EB5757" }} className="material-icons-round">
             search
           </span>
-        </button>
+        </div>
       </form>
-      <Modal />
+
+      {
+        handlingModal()
+      }
     </>
   )
 }
