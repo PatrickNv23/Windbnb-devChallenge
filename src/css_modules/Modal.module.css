@@ -1,0 +1,230 @@
+.containerModal {
+  background-color: rgba(79, 79, 79, 0.4);
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.containerFormModal {
+  background-color: #FFFFFF;
+  z-index: 2;
+  width: 100%;
+  height: 460px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 1248px);
+  justify-content: center;
+}
+
+
+.formSearchModal {
+  height: auto;
+  /* background-color: aqua; */
+  display: flex;
+  width: auto;
+  height: 377px;
+  margin-top: 93px;
+}
+
+.containerLocationsModal {
+  /* background-color: lightblue; */
+  min-width: auto;
+  width: 427px;
+  max-width: 427px;
+  height: auto;
+}
+
+.containerGuestsModal {
+  /* background-color: lightgreen; */
+  min-width: auto;
+  width: 426px;
+  max-width: 426px;
+  height: auto;
+}
+
+.containerSearchButtonModal {
+  /* background-color: lightcoral; */
+  min-width: auto;
+  width: 395px;
+  max-width: 395px;
+  height: auto;
+}
+
+/* SECTION LOCATIONS*/
+.containerInputLocationModal,
+.containerInputGuestsModal {
+  min-width: auto;
+  width: 100%;
+  height: 55px;
+  /* background-color: bisque; */
+  display: flex;
+  flex-direction: column;
+}
+
+.labelLocationModal {
+  padding-left: 27px;
+}
+
+.labelLocationModal,
+.labelGuestsModal {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 9px;
+  line-height: 11px;
+  text-transform: uppercase;
+  color: #333333;
+  padding-top: 12px;
+}
+
+
+.inputLocationModal,
+.inputGuestsModal {
+  width: 90%;
+  height: 100%;
+  margin-left: 27px;
+  outline: none;
+  border: none;
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #BDBDBD;
+}
+
+.containerOptionsLocationModal {
+  /* background-color: red; */
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.containerOptionLocationModal {
+  /* background-color: pink; */
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+}
+
+.optionTextLocation {
+  padding-left: 10px;
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #4F4F4F;
+}
+
+/*SECTION GUESTS */
+.labelGuestsModal {
+  padding-left: 32px;
+}
+
+.inputGuestsModal {
+  margin-left: 32px;
+}
+
+.containerCounterGuestsModal {
+  /* background-color: violet; */
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+
+.containerCounterAdultsModal,
+.containerCounterChildrenModal {
+  /* background-color: lightcoral; */
+  width: 80%;
+  margin-left: 32px;
+}
+
+.textTypeGuestModal,
+.textIntervalYearsOld {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.textTypeGuestModal {
+  color: #333333;
+}
+
+.textIntervalYearsOld {
+  color: #BDBDBD;
+}
+
+
+.containerCounterSelectionGuestsModal {
+  /* background-color: red; */
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttonSelectionCounterGuestsModal {
+  width: 23px;
+  height: 23px;
+  border: none;
+  outline: none;
+  background: none;
+  border: 1px solid #828282;
+  border-radius: 4px;
+  color: #828282;
+  cursor: pointer;
+}
+
+
+.textCounterModal {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: #333333;
+}
+
+/*SECTION SEARCH BUTTON */
+
+.containerSearchButtonFormModal {
+  /* background-color: greenyellow; */
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonSubmitFormModal {
+  width: 126px;
+  height: 48px;
+  outline: none;
+  border: none;
+  background: rgba(235, 87, 87, 0.9);
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+
+.textButtonSubmitSearchModal {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: #F2F2F2;
+}
