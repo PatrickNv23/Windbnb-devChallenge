@@ -1,15 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import styles from '../css_modules/StaysGrid.module.css';
 import StayCard from './StayCard.jsx';
-import staysJson from '../data/stays.json';
-
+import { StaysGlobalContext } from '../App.jsx';
 
 export default function StaysGrid() {
 
   const [stays, setStays] = useState([]);
   const [counterStays, setCounterStays] = useState(0);
+
+  const staysContext = useContext(StaysGlobalContext);
+
   useEffect(() => {
-    setStays(staysJson)
+    setStays(staysContext)
     setCounterStays(stays.length);
   }, [])
 

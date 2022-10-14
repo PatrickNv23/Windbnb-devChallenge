@@ -1,14 +1,28 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import ReactDOM from 'react-dom';
 import styles from '../css_modules/Modal.module.css';
-
+import { StaysGlobalContext } from '../App';
 export default function Modal({ isOpen, resetStateInputSearch }) {
 
   const [open, setOpen] = useState(true);
+  const [cities, setCities] = useState([]);
+
+  const stays = useContext(StaysGlobalContext);
+
+  const getCities = () => {
+    // I use SET because it's not repeat and I can filter the cities.
+    const set = new Set();
+    stays.map((stay) => {
+      set.add(stay.city);
+    })
+    // Convert SET to ARRAY
+    return [...set.keys()]
+  }
 
   useEffect(() => {
     setOpen(isOpen)
     closeModal()
+    setCities(getCities());
   }, []);
 
   function handlingSubmitSearchForm(e) {
@@ -22,7 +36,6 @@ export default function Modal({ isOpen, resetStateInputSearch }) {
 
   function closeModal() {
     const containerModal = document.getElementById("containerModal");
-    console.log(containerModal)
     containerModal.addEventListener("click", () => {
       resetStateInputSearch(false);
       setOpen(false);
@@ -57,7 +70,19 @@ export default function Modal({ isOpen, resetStateInputSearch }) {
         <div className={styles.containerLocationsModal}>
 
           <div className={styles.containerOptionsLocationModal}>
-            <div className={styles.containerOptionLocationModal}>
+
+            {
+              cities.map((city) => {
+                return <div className={styles.containerOptionLocationModal}>
+                  <span style={{ paddingLeft: "27px", color: "#4F4F4F" }} class="material-icons-sharp">
+                    location_on
+                  </span>
+                  <p className={styles.optionTextLocation}>{city}, Finland</p>
+                </div>
+              })
+            }
+
+            {/* <div className={styles.containerOptionLocationModal}>
               <span style={{ paddingLeft: "27px", color: "#4F4F4F" }} class="material-icons-sharp">
                 location_on
               </span>
@@ -83,7 +108,7 @@ export default function Modal({ isOpen, resetStateInputSearch }) {
                 location_on
               </span>
               <p className={styles.optionTextLocation}>Vaasa, Finland</p>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -117,5 +142,4 @@ export default function Modal({ isOpen, resetStateInputSearch }) {
     ,
     document.body
   )
-
 }

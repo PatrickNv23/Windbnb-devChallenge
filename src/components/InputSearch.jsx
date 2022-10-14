@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import styles from '../css_modules/InputSearch.module.css';
 import Modal from './Modal.jsx';
+
+
 export default function InputSearch() {
   const [modalHandler, setModalHandler] = useState(false);
 
