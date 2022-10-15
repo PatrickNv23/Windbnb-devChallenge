@@ -1,24 +1,30 @@
 import React, { useContext, useEffect, useState } from 'react'
 import styles from '../css_modules/StaysGrid.module.css';
 import StayCard from './StayCard.jsx';
-import { StaysGlobalContext } from '../App.jsx';
+import { StaysGlobalContext } from '../context/StaysProvider.jsx';
+import { useParams } from 'react-router-dom';
+import { filterStaysByCity } from '../services/staysService.js';
 
 export default function StaysGrid() {
+
+  const { location } = useParams();
 
   const [stays, setStays] = useState([]);
   const [counterStays, setCounterStays] = useState(0);
 
   const staysContext = useContext(StaysGlobalContext);
 
-  useEffect(() => {
-    // setStays(staysContext.staysGlobal)
-    setStays(staysContext)
-    setCounterStays(stays.length);
-  }, [stays]);
 
   useEffect(() => {
-    setCounterStays(stays.length);
-  }, [stays])
+    if (location) {
+      setStays(filterStaysByCity(location))
+      setCounterStays(stays.length);
+    } else {
+      setStays(staysContext.staysGlobal)
+      setCounterStays(stays.length);
+      console.log(location ? location : "Hola")
+    }
+  }, [])
 
   return (
     <main className={styles.container_main}>

@@ -2,34 +2,26 @@ import './App.css';
 import Header from './components/Header.jsx';
 import StaysGrid from './components/StaysGrid.jsx';
 import Footer from './components/Footer.jsx';
-import { createContext, useEffect, useState } from 'react';
-import staysJson from './data/stays.json';
-
-// export const StaysGlobalContext = createContext({
-//   staysGlobal: [],
-//   setStaysGlobal: () => { }
-// });
-
-export const StaysGlobalContext = createContext();
-
+import StaysProvider from './context/StaysProvider.jsx';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
 
-  // const [staysGlobal, setStaysGlobal] = useState(staysJson);
-  // const value = { staysGlobal, setStaysGlobal };
-
-  // useEffect(() => {
-  //   console.log(staysGlobal)
-  // }, [staysGlobal])
-
   return (
-    <StaysGlobalContext.Provider value={staysJson}>
-      <div className="container_app">
-        <Header />
-        <StaysGrid />
-        <Footer />
-      </div>
-    </StaysGlobalContext.Provider>
+    <BrowserRouter>
+      <StaysProvider>
+        <div className="container_app">
+          <Header />
+          <Routes>
+            <Route path='/' element={<StaysGrid />} />
+            <Route path='/stays' element={<StaysGrid />} />
+            <Route path='/stays/:location' element={<StaysGrid />} />
+          </Routes>
+          <Footer />
+        </div>
+      </StaysProvider>
+    </BrowserRouter>
+
   )
 }
 

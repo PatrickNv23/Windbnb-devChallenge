@@ -1,8 +1,10 @@
 import React, { useEffect, useState, useContext } from 'react';
 import ReactDOM from 'react-dom';
 import styles from '../css_modules/Modal.module.css';
-import { StaysGlobalContext } from '../App';
-// import { filterStaysByCity } from '../services/staysService.js';
+import { StaysGlobalContext } from '../context/StaysProvider.jsx';
+import { filterStaysByCity } from '../services/staysService.js';
+import staysJson from '../data/stays.json';
+
 export default function Modal({ isOpen, resetStateInputSearch }) {
 
   const [open, setOpen] = useState(true);
@@ -12,8 +14,7 @@ export default function Modal({ isOpen, resetStateInputSearch }) {
   const [childrenGuestCounter, setChildrenGuestCounter] = useState(0);
 
 
-  // const { staysGlobal, setStaysGlobal } = useContext(StaysGlobalContext);
-  const stays = useContext(StaysGlobalContext);
+  const { staysGlobal, setStaysGlobal } = useContext(StaysGlobalContext);
 
   const handlingInputLocation = (city) => {
     setInputLocation(city)
@@ -38,7 +39,7 @@ export default function Modal({ isOpen, resetStateInputSearch }) {
   const getCities = () => {
     // I use SET because it's not repeat and I can filter the cities.
     const set = new Set();
-    stays.map((stay) => {
+    staysJson.map((stay) => {
       set.add(stay.city);
     })
     // Convert SET to ARRAY
@@ -53,9 +54,8 @@ export default function Modal({ isOpen, resetStateInputSearch }) {
 
   function handlingSubmitSearchForm(e) {
     e.preventDefault();
-    // setStaysGlobal(filterStaysByCity(inputLocation));
-    // console.log(filterStaysByCity(inputLocation));
-    // filterStaysByCity(inputLocation);
+    setStaysGlobal(filterStaysByCity(inputLocation));
+    resetStateInputSearch(false);
     setOpen(false);
   }
 
@@ -95,11 +95,16 @@ export default function Modal({ isOpen, resetStateInputSearch }) {
           </div>
           <div className={styles.containerSearchButtonModal}>
             <div className={styles.containerSearchButtonFormModal}>
+
               <button className={styles.buttonSubmitFormModal}>
                 <span style={{ color: "white" }} className="material-icons-round">
                   search
                 </span>
-                <p className={styles.textButtonSubmitSearchModal}>Search</p>
+                <a href={"/stays/" + inputLocation} style={{ textDecoration: "none" }}>
+                  <p className={styles.textButtonSubmitSearchModal}>
+                    Search
+                  </p>
+                </a>
               </button>
             </div>
           </div>
