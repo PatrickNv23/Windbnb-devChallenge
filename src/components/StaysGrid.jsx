@@ -11,9 +11,10 @@ export default function StaysGrid() {
   const staysContext = useContext(StaysGlobalContext);
 
   useEffect(() => {
+    // setStays(staysContext.staysGlobal)
     setStays(staysContext)
     setCounterStays(stays.length);
-  }, [])
+  }, [stays]);
 
   useEffect(() => {
     setCounterStays(stays.length);

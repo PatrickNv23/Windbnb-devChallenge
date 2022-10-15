@@ -25,7 +25,7 @@ export default function InputSearch() {
     <>
       <form className={styles.formSearch} onClick={() => handleClickSearchForm()} >
         <div className={styles.containerCountrySearch}>
-          Helsinki, Finland
+          Add Location
         </div>
         <div className={styles.containerGuestSearch}>
           Add guest
