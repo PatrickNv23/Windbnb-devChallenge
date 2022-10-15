@@ -97,7 +97,7 @@ export default function Modal({ isOpen, resetStateInputSearch }) {
             <div className={styles.containerSearchButtonFormModal}>
 
               <button className={styles.buttonSubmitFormModal}>
-                <span style={{ color: "white" }} className="material-icons-round">
+                <span style={{ color: "#F2F2F2" }} className="material-icons-round">
                   search
                 </span>
                 <a href={"/stays/" + inputLocation} style={{ textDecoration: "none" }}>

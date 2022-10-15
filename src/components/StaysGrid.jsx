@@ -18,10 +18,10 @@ export default function StaysGrid() {
   useEffect(() => {
     if (location) {
       setStays(filterStaysByCity(location))
-      setCounterStays(stays.length);
+      setCounterStays(filterStaysByCity(location).length);
     } else {
       setStays(staysContext.staysGlobal)
-      setCounterStays(stays.length);
+      setCounterStays(staysContext.staysGlobal.length);
       console.log(location ? location : "Hola")
     }
   }, [])
