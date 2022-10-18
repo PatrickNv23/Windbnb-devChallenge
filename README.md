@@ -56,8 +56,8 @@
 <!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
 
 - [React](https://reactjs.org/)
-- [Vue.js](https://vuejs.org/)
-- [Tailwind](https://tailwindcss.com/)
+- [CSS Modules](https://github.com/css-modules/css-modules)
+- [React Router Dom v6](https://reactrouter.com/en/v6.3.0/getting-started/overview)
 
 ## Features
 
@@ -92,4 +92,4 @@ $ npm run dev
 
 ## Contact
 
-- GitHub [@your-username](https://github.com/PatrickNv23)
+- GitHub [@PatrickNv23](https://github.com/PatrickNv23)
