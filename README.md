@@ -37,7 +37,10 @@
 
 ## Overview
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
+![screenshot](https://raw.githubusercontent.com/PatrickNv23/Windbnb-devChallenge/main/src/assets/windbnb-1.png)
+![screenshot](https://raw.githubusercontent.com/PatrickNv23/Windbnb-devChallenge/main/src/assets/windbnb-2.png)
+![screenshot](https://raw.githubusercontent.com/PatrickNv23/Windbnb-devChallenge/main/src/assets/windbnb-3.png)
+![screenshot](https://raw.githubusercontent.com/PatrickNv23/Windbnb-devChallenge/main/src/assets/windbnb-4.png)
 
 - Where can I see your demo?
   This frontend challenge was uploaded to the Netlify domains, because it is a very powerful service to upload your React projects to the internet.
