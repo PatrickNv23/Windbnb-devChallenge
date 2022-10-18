@@ -13,9 +13,9 @@ function App() {
         <div className="container_app">
           <Header />
           <Routes>
-            <Route path='/' element={<StaysGrid />} />
-            <Route path='/stays' element={<StaysGrid />} />
-            <Route path='/stays/:location' element={<StaysGrid />} />
+            <Route path='https://patricknv23windbnb.netlify.app/' element={<StaysGrid />} />
+            <Route path='https://patricknv23windbnb.netlify.app/stays' element={<StaysGrid />} />
+            <Route path='https://patricknv23windbnb.netlify.app/stays/:location' element={<StaysGrid />} />
           </Routes>
           <Footer />
         </div>
