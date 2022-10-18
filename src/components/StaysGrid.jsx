@@ -29,7 +29,11 @@ export default function StaysGrid() {
   return (
     <main className={styles.container_main}>
       <section className={styles.section_title}>
-        <h2 className={styles.titleStays}>Stays</h2>
+        <h2 className={styles.titleStays}>
+          {
+            location ? 'Stays in ' + location : 'Stays'
+          }
+        </h2>
         <p className={styles.totalStays}>{counterStays}+ stays</p>
 
       </section>

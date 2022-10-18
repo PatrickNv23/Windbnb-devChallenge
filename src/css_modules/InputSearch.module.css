@@ -26,7 +26,6 @@
 }
 
 .containerCountrySearch {
-  /* background-color: aqua; */
   width: 138px;
   color: #BDBDBD;
   border-right: 1px solid #F2F2F2;
@@ -34,7 +33,6 @@
 }
 
 .containerGuestSearch {
-  /* background-color: lightblue; */
   width: 106px;
   color: #BDBDBD;
   border-right: 1px solid #F2F2F2;
@@ -42,6 +40,5 @@
 }
 
 .containerIconSearch {
-  /* background-color: lightcoral; */
   width: 53px;
 }

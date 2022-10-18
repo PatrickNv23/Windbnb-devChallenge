@@ -5,7 +5,7 @@ import InputSearch from './InputSearch.jsx';
 export default function Header() {
   return (
     <header className={styles.header}>
-      <a href="/">
+      <a href="/" className={styles.hrefLogo}>
         <img className={styles.imageLogo} src={logoWindbnb} alt="Windbnb" />
       </a>
       <InputSearch />

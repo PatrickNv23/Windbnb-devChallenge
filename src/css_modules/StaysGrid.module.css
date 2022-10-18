@@ -3,13 +3,11 @@
   width: 100%;
   min-height: 100%;
   max-height: auto;
-  /* background-color: lightblue; */
 }
 
 .section_title {
   width: 100%;
   height: auto;
-  /* background-color: lightgreen; */
   display: flex;
   justify-content: space-between;
 }
@@ -21,7 +19,6 @@
   line-height: 29px;
   color: #333333;
   padding: 16px 16px 16px 25px;
-  /* top right botton left */
 }
 
 .totalStays {
@@ -44,5 +41,9 @@
   .container_grid {
     display: grid;
     grid-template-columns: 1fr;
+  }
+
+  .titleStays {
+    font-size: 18px;
   }
 }

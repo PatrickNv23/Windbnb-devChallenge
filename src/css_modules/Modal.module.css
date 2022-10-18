@@ -1,5 +1,4 @@
 .containerFormModal {
-  z-index: 1;
   position: fixed;
   top: 0;
   left: 0;
@@ -28,7 +27,6 @@
 
 .formSearchModal {
   height: auto;
-  /* background-color: aqua; */
   display: flex;
   min-width: auto;
   width: 1248px;
@@ -63,7 +61,6 @@
 .containerInputLocationModal:focus-within,
 .containerInputGuestsModal:focus-within {
   border: 1px solid #333333;
-  /* filter: drop-shadow(0px 1px 6px rgba(0, 0, 0, 0.1)); */
   border-radius: 16px;
 
 }
@@ -82,7 +79,6 @@
 }
 
 .containerLocationsModal {
-  /* background-color: lightblue; */
   max-width: 427px;
   grid-column-start: 1;
   grid-column-end: 2;
@@ -90,7 +86,6 @@
 }
 
 .containerGuestsModal {
-  /* background-color: lightgreen; */
   max-width: 426px;
   grid-column-start: 2;
   grid-column-end: 3;
@@ -100,8 +95,6 @@
 /* SECTION LOCATIONS*/
 .containerInputLocationModal,
 .containerInputGuestsModal {
-  /* height: auto; */
-  /* background-color: bisque; */
   display: flex;
   flex-direction: column;
 }
@@ -140,7 +133,6 @@
 }
 
 .containerOptionsLocationModal {
-  /* background-color: red; */
   height: 80%;
   display: flex;
   flex-direction: column;
@@ -149,7 +141,6 @@
 }
 
 .containerOptionLocationModal {
-  /* background-color: pink; */
   display: flex;
   width: 100%;
   cursor: pointer;
@@ -175,7 +166,6 @@
 }
 
 .containerCounterGuestsModal {
-  /* background-color: violet; */
   height: 80%;
   display: flex;
   flex-direction: column;
@@ -185,7 +175,6 @@
 
 .containerCounterAdultsModal,
 .containerCounterChildrenModal {
-  /* background-color: lightcoral; */
   width: 80%;
   margin-left: 32px;
   margin-bottom: 4px;
@@ -211,7 +200,6 @@
 
 
 .containerCounterSelectionGuestsModal {
-  /* background-color: red; */
   width: 25%;
   display: flex;
   justify-content: space-between;
@@ -244,7 +232,6 @@
 /*SECTION SEARCH BUTTON */
 
 .containerSearchButtonFormModal {
-  /* background-color: greenyellow; */
   height: 55px;
   display: flex;
   justify-content: center;
@@ -272,4 +259,76 @@
   font-size: 14px;
   line-height: 18px;
   color: #F2F2F2;
+}
+
+/* SECTION RESPONSIVE */
+
+
+@media only screen and (max-width:810px) {
+  .containerFormModal {
+    height: 632px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .formSearchModal {
+    flex-direction: column;
+    justify-content: space-around;
+    width: 351px;
+    max-width: 351px;
+    border: none;
+    min-height: 200px;
+    max-height: auto;
+    margin-top: 25px;
+  }
+
+  .containerInputLocationModal,
+  .containerInputGuestsModal {
+    max-width: 351px;
+    border-right: none;
+  }
+
+
+  .containerSearchButtonFormModal,
+  .containerSearchButtonModal {
+    height: auto;
+  }
+
+  .containerLocationsModal {
+    width: 100%;
+    height: auto;
+  }
+
+  .containerOptionsLocationModal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+
+  .containerGuestsModal {
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 5px;
+  }
+
+  .containerCounterGuestsModal,
+  .containerCounterAdultsModal,
+  .containerCounterChildrenModal {
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .formSearchModal {
+    width: auto;
+    max-width: 330px;
+  }
 }
