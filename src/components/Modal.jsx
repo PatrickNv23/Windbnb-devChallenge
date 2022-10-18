@@ -96,16 +96,15 @@ export default function Modal({ isOpen, resetStateInputSearch }) {
           <div className={styles.containerSearchButtonModal}>
             <div className={styles.containerSearchButtonFormModal}>
 
-              <button className={styles.buttonSubmitFormModal}>
+              <a className={styles.buttonSubmitFormModal} href={"/stays/" + inputLocation} style={{ textDecoration: "none" }}>
                 <span style={{ color: "#F2F2F2" }} className="material-icons-round">
                   search
                 </span>
-                <a href={"/stays/" + inputLocation} style={{ textDecoration: "none" }}>
-                  <p className={styles.textButtonSubmitSearchModal}>
-                    Search
-                  </p>
-                </a>
-              </button>
+
+                <p className={styles.textButtonSubmitSearchModal}>
+                  Search
+                </p>
+              </a>
             </div>
           </div>
         </form>
