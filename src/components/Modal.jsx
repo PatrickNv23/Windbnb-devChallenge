@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useEffect, useState, useContext, useRef } from 'react';
 import ReactDOM from 'react-dom';
 import styles from '../css_modules/Modal.module.css';
 import { StaysGlobalContext } from '../context/StaysProvider.jsx';
@@ -12,6 +12,7 @@ export default function Modal({ isOpen, resetStateInputSearch }) {
   const [inputLocation, setInputLocation] = useState("");
   const [adultGuestCounter, setAdultGuestCounter] = useState(0);
   const [childrenGuestCounter, setChildrenGuestCounter] = useState(0);
+  const containerModal = useRef();
 
 
   const { staysGlobal, setStaysGlobal } = useContext(StaysGlobalContext);
@@ -64,12 +65,10 @@ export default function Modal({ isOpen, resetStateInputSearch }) {
   }
 
   function closeModal() {
-    const containerModal = document.getElementById("containerModal");
-    containerModal.addEventListener("click", () => {
+    containerModal.current.addEventListener("click", () => {
       resetStateInputSearch(false);
       setOpen(false);
     })
-
   }
 
 
@@ -150,7 +149,7 @@ export default function Modal({ isOpen, resetStateInputSearch }) {
           </div>
         </div>
       </div >
-      <div id="containerModal" className={styles.containerModalBottom}>
+      <div id="containerModal" className={styles.containerModalBottom} ref={containerModal}>
       </div>
     </>
     ,
